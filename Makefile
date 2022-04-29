@@ -28,6 +28,7 @@ DEF_COLOR = \033[0;39m
 GREEN = \033[0;92m
 YELLOW = \033[0;93m
 CYAN = \033[0;96m
+BLUE = \033[0;94m
 
 #Sources
 
