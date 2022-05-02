@@ -6,7 +6,7 @@
 /*   By: alondot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 12:16:33 by alondot           #+#    #+#             */
-/*   Updated: 2022/01/12 12:17:13 by alondot          ###   ########.fr       */
+/*   Updated: 2022/02/23 17:35:37 by alondot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*str;
 	size_t	i;
 
+	if (!s)
+		return (NULL);
 	str = ft_strdup(s);
 	if (!str)
 		return (NULL);

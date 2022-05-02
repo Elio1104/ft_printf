@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_unsigned.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alondot <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/29 10:42:10 by alondot           #+#    #+#             */
+/*   Updated: 2022/04/29 10:46:07 by alondot          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 #include <stdlib.h>
 
-int    ft_num_len(unsigned	  int num)
+int	ft_num_len(unsigned int num)
 {
-	int    len;
-	
+	int	len;
+
 	len = 0;
 	while (num != 0)
 	{
@@ -17,8 +29,8 @@ int    ft_num_len(unsigned	  int num)
 char	*ft_uitoa(unsigned int n)
 {
 	char	*num;
-	int		   len;
-	
+	int		len;
+
 	len = ft_num_len(n);
 	num = (char *)malloc(sizeof(char) * (len + 1));
 	if (!num)
@@ -33,11 +45,11 @@ char	*ft_uitoa(unsigned int n)
 	return (num);
 }
 
-int    ft_print_unsigned(unsigned int n)
+int	ft_print_unsigned(unsigned int n)
 {
-	int		   print_length;
+	int		print_length;
 	char	*num;
-	
+
 	print_length = 0;
 	if (n == 0)
 		print_length += write(1, "0", 1);

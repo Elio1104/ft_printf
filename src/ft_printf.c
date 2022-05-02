@@ -1,15 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alondot <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/29 10:35:24 by alondot           #+#    #+#             */
+/*   Updated: 2022/04/29 10:37:21 by alondot          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
-int    ft_printchar(int c)
+int	ft_printchar(int c)
 {
 	write(1, &c, 1);
 	return (1);
 }
 
-int    ft_formats(va_list args, const char format)
+int	ft_formats(va_list args, const char format)
 {
-	int    print_length;
-	
+	int	print_length;
+
 	print_length = 0;
 	if (format == 'c')
 		print_length += ft_printchar(va_arg(args, int));
@@ -28,12 +40,12 @@ int    ft_formats(va_list args, const char format)
 	return (print_length);
 }
 
-int    ft_printf(const char *str, ...)
+int	ft_printf(const char *str, ...)
 {
-	int		   i;
-	va_list    args;
-	int		   print_length;
-	
+	int			i;
+	va_list		args;
+	int			print_length;
+
 	i = 0;
 	print_length = 0;
 	va_start(args, str);

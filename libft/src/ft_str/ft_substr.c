@@ -6,7 +6,7 @@
 /*   By: alondot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 12:25:50 by alondot           #+#    #+#             */
-/*   Updated: 2022/01/12 14:07:27 by alondot          ###   ########.fr       */
+/*   Updated: 2022/02/23 17:28:54 by alondot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static int	malloc_size(char const *s, unsigned int start, size_t len)
 		return (len);
 }
 
-char		*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	char	*str;
@@ -30,8 +30,8 @@ char		*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!s)
 		return (NULL);
 	str = malloc(sizeof(char) * (malloc_size(s, start, len) + 1));
-	if(!str)
-		return(0);
+	if (!str)
+		return (0);
 	if ((size_t)start >= ft_strlen(s))
 	{
 		str[0] = '\0';

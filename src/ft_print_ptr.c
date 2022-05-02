@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_ptr.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alondot <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/29 10:38:12 by alondot           #+#    #+#             */
+/*   Updated: 2022/04/29 10:40:33 by alondot          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 #include "libft.h"
 
-int    ft_ptr_len(uintptr_t num)
+int	ft_ptr_len(uintptr_t num)
 {
-	int    len;
-	
+	int	len;
+
 	len = 0;
 	while (num != 0)
 	{
@@ -30,10 +42,10 @@ void	ft_put_ptr(uintptr_t num)
 	}
 }
 
-int    ft_print_ptr(unsigned long long ptr)
+int	ft_print_ptr(unsigned long long ptr)
 {
-	int    print_length;
-	
+	int	print_length;
+
 	print_length = 0;
 	print_length += write(1, "0x", 2);
 	if (ptr == 0)

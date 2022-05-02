@@ -6,7 +6,7 @@
 /*   By: alondot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 12:20:05 by alondot           #+#    #+#             */
-/*   Updated: 2022/01/12 12:21:36 by alondot          ###   ########.fr       */
+/*   Updated: 2022/02/23 18:29:25 by alondot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,7 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 	size_t	i;
 	size_t	j;
 
-	if (!s1 || !s2)
-		return (NULL);
-	if (!s1 || !s2[0])
+	if (!s2[0])
 		return ((char *)s1);
 	i = 0;
 	while (s1[i] && i < len)
